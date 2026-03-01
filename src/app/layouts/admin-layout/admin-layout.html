@@ -1,0 +1,30 @@
+<div class="min-h-screen flex bg-gray-100">
+  <aside class="w-64 bg-fit-dark text-white p-6 flex flex-col">
+    <div class="mb-10">
+      <span class="text-2xl font-black text-fit-accent tracking-tighter italic">FIT<span class="text-white">CONNECT</span></span>
+    </div>
+    
+    <nav class="flex-grow space-y-4">
+      <a routerLink="/admin/dashboard" routerLinkActive="bg-fit-accent" class="block p-3 rounded-xl hover:bg-gray-800 transition">Dashboard</a>
+      <a routerLink="/admin/clientes" routerLinkActive="bg-fit-accent" class="block p-3 rounded-xl hover:bg-gray-800 transition">Clientes</a>
+      <a routerLink="/admin/rutinas" routerLinkActive="bg-fit-accent" class="block p-3 rounded-xl hover:bg-gray-800 transition">Rutinas</a>
+    </nav>
+
+    <div class="border-t border-gray-700 pt-6">
+      <a routerLink="/" class="text-gray-400 hover:text-white transition">Cerrar Sesión</a>
+    </div>
+  </aside>
+
+  <div class="flex-1 flex flex-col">
+    <header class="bg-white shadow p-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold text-gray-800">Panel de Control</h1>
+      <div class="flex items-center gap-4">
+        <span class="text-sm text-gray-600">Entrenador: Juan Pérez</span>
+        <img src="https://ui-avatars.com/api/?name=Juan+Perez" class="w-10 h-10 rounded-full">
+      </div>
+    </header>
+
+    <main class="flex-1 p-8">
+      <router-outlet></router-outlet> </main>
+  </div>
+</div>

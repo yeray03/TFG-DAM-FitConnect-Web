@@ -1,0 +1,70 @@
+<div class="p-6">
+  <div class="flex justify-between items-center mb-6">
+    <h2 class="text-2xl font-bold text-gray-800">Lista de Clientes</h2>
+    <button (click)="openModal()" class="bg-fit-accent text-white px-4 py-2 rounded-lg hover:bg-opacity-90 transition">
+      + Nuevo Cliente
+    </button>
+  </div>
+
+  <div class="bg-white shadow rounded-lg overflow-hidden">
+    <table class="w-full text-left">
+      <thead class="bg-gray-50 border-b border-gray-200">
+        <tr>
+          <th class="p-4 text-sm font-semibold text-gray-600">Nombre</th>
+          <th class="p-4 text-sm font-semibold text-gray-600">Email</th>
+          <th class="p-4 text-sm font-semibold text-gray-600">Plan</th>
+          <th class="p-4 text-sm font-semibold text-gray-600">Acciones</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-200">
+        @for (cliente of clientes; track cliente.email) {
+          <tr class="hover:bg-gray-50">
+            <td class="p-4 text-sm font-medium text-gray-900">{{ cliente.nombre }}</td>
+            <td class="p-4 text-sm text-gray-600">{{ cliente.email }}</td>
+            <td class="p-4 text-sm">
+              <span class="bg-green-100 text-green-700 px-2 py-1 rounded-full text-xs">
+                {{ cliente.plan }}
+              </span>
+            </td>
+            <td class="p-4 text-sm">
+              <button class="text-blue-600 hover:text-blue-800">Ver</button>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
+
+@if (isModalOpen) {
+  <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+    <div class="bg-white rounded-lg shadow-xl w-full max-w-md p-6">
+      <h3 class="text-xl font-bold mb-4">Añadir Nuevo Cliente</h3>
+      
+      <form (ngSubmit)="addCliente()" class="space-y-4">
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Nombre Completo</label>
+          <input type="text" [(ngModel)]="newCliente.nombre" name="nombre" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-fit-accent focus:ring-fit-accent">
+        </div>
+        
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Email</label>
+          <input type="email" [(ngModel)]="newCliente.email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-fit-accent focus:ring-fit-accent">
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Plan</label>
+          <select [(ngModel)]="newCliente.plan" name="plan" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-fit-accent focus:ring-fit-accent">
+            <option value="Básico">Básico</option>
+            <option value="Premium">Premium</option>
+          </select>
+        </div>
+
+        <div class="flex justify-end gap-3 mt-6">
+          <button type="button" (click)="closeModal()" class="bg-gray-200 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-300">Cancelar</button>
+          <button type="submit" class="bg-fit-accent text-white px-4 py-2 rounded-lg hover:bg-opacity-90">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+}

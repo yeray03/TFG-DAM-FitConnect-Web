@@ -1,0 +1,38 @@
+<div class="p-6">
+  <h2 class="text-3xl font-bold text-gray-800 mb-6">Hola, Entrenador 👋</h2>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+      <p class="text-sm text-gray-500 uppercase font-semibold">Clientes Activos</p>
+      <p class="text-4xl font-bold text-gray-900 mt-2">12</p>
+    </div>
+    
+    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+      <p class="text-sm text-gray-500 uppercase font-semibold">Rutinas Activas</p>
+      <p class="text-4xl font-bold text-gray-900 mt-2">25</p>
+    </div>
+    
+    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+      <p class="text-sm text-gray-500 uppercase font-semibold">Sesiones Hoy</p>
+      <p class="text-4xl font-bold text-fit-accent mt-2">4</p>
+    </div>
+  </div>
+
+  <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
+    <h3 class="text-xl font-semibold text-gray-800 mb-4">Agenda de Hoy</h3>
+    <div class="space-y-4">
+      
+      @for (item of agenda; track item.id) {
+        <div class="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
+          <div>
+            <p class="font-medium text-gray-900">{{ item.cliente }}</p>
+            <p class="text-sm text-gray-600">{{ item.hora }} - {{ item.actividad }}</p>
+          </div>
+          <button [routerLink]="['/admin/entrenamiento', item.id]" class="text-sm bg-gray-800 text-white px-3 py-1 rounded-md hover:bg-gray-700">
+            Ver
+          </button>
+        </div>
+      }
+      </div>
+  </div>
+</div>

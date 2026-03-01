@@ -1,0 +1,106 @@
+<section class="relative bg-white pt-16 pb-32 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
+      <div class="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
+        <span
+          class="inline-block px-3 py-1 text-xs font-semibold tracking-wider text-fit-accent uppercase bg-fit-primary rounded-full mb-4"
+        >
+          Próxima Generación de Fitness
+        </span>
+        <h1 class="text-5xl md:text-6xl font-extrabold text-fit-dark leading-tight mb-6">
+          Gestiona tu centro <br />
+          <span class="text-fit-accent">sin límites.</span>
+        </h1>
+        <p class="text-lg text-gray-500 mb-8 leading-relaxed">
+          La plataforma definitiva para entrenadores y centros deportivos. Optimiza tus rutinas,
+          conecta con tus clientes y lleva el seguimiento de cada repetición en tiempo real.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <button
+            routerLink="/login"
+            class="px-8 py-4 bg-fit-accent text-white font-bold rounded-xl hover:scale-105 transition-transform shadow-xl shadow-blue-200"
+          >
+            Empezar ahora
+          </button>
+
+          <button
+            (click)="scrollToFeatures()"
+            class="px-8 py-4 bg-white border-2 border-gray-100 text-fit-dark font-bold rounded-xl hover:bg-gray-50 transition"
+          >
+            Saber más
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center"
+      >
+        <div
+          class="relative mx-auto w-full rounded-3xl shadow-2xl overflow-hidden rotate-2 hover:rotate-0 transition-transform duration-500"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80"
+            alt="Entrenamiento FITCONNECT"
+            class="w-full object-cover aspect-[4/3]"
+          />
+          <div
+            class="absolute bottom-6 left-6 bg-white p-4 rounded-2xl shadow-lg flex items-center space-x-3"
+          >
+            <div class="bg-fit-primary p-2 rounded-full text-fit-accent">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                />
+              </svg>
+            </div>
+            <div>
+              <p class="text-sm font-bold text-fit-dark">+500 Entrenadores</p>
+              <p class="text-xs text-gray-400">Confían en nosotros</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="features" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-extrabold text-fit-dark sm:text-4xl">
+        Todo lo que un entrenador necesita
+      </h2>
+      <p class="mt-4 text-lg text-gray-500">
+        Diseñado por profesionales del fitness para optimizar cada minuto de tu entrenamiento.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div class="p-8 bg-gray-50 rounded-3xl border border-transparent hover:border-fit-accent transition duration-300">
+        <div class="w-12 h-12 bg-fit-accent/10 text-fit-accent rounded-xl flex items-center justify-center mb-6 text-2xl">📋</div>
+        <h3 class="text-xl font-bold text-fit-dark mb-3">Rutinas Inteligentes</h3>
+        <p class="text-gray-500">Crea planes de entrenamiento personalizados en segundos con nuestra base de datos de ejercicios.</p>
+      </div>
+
+      <div class="p-8 bg-gray-50 rounded-3xl border border-transparent hover:border-fit-accent transition duration-300">
+        <div class="w-12 h-12 bg-fit-accent/10 text-fit-accent rounded-xl flex items-center justify-center mb-6 text-2xl">📈</div>
+        <h3 class="text-xl font-bold text-fit-dark mb-3">Seguimiento Real</h3>
+        <p class="text-gray-500">Visualiza el progreso de tus clientes con gráficas de rendimiento y evolución de medidas corporales.</p>
+      </div>
+
+      <div class="p-8 bg-gray-50 rounded-3xl border border-transparent hover:border-fit-accent transition duration-300">
+        <div class="w-12 h-12 bg-fit-accent/10 text-fit-accent rounded-xl flex items-center justify-center mb-6 text-2xl">💬</div>
+        <h3 class="text-xl font-bold text-fit-dark mb-3">Conexión Directa</h3>
+        <p class="text-gray-500">Chat integrado para resolver dudas y mantener la motivación de tus atletas al máximo.</p>
+      </div>
+    </div>
+  </div>
+</section>
