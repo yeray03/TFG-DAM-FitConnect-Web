@@ -1,0 +1,48 @@
+<div class="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+  <div class="max-w-md w-full space-y-8 bg-white p-10 rounded-3xl shadow-2xl border border-gray-100 relative overflow-hidden">
+    
+    <div class="absolute top-0 left-0 w-full h-2 bg-fit-accent"></div>
+
+    <div class="text-center">
+      <span class="text-3xl font-black text-fit-accent tracking-tighter italic">FIT<span class="text-fit-dark">CONNECT</span></span>
+      <h2 class="mt-6 text-2xl font-bold text-fit-dark">Panel de Entrenadores</h2>
+      <p class="mt-2 text-sm text-gray-500">Introduce tus credenciales para acceder</p>
+    </div>
+
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm" class="mt-8 space-y-6">
+      <div class="space-y-4">
+        <div>
+          <label class="block text-sm font-bold text-gray-700 mb-1">Usuario o Email</label>
+          <input type="text" name="email" [(ngModel)]="loginData.email" required 
+            class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-fit-accent focus:ring-4 focus:ring-fit-accent/10 outline-none transition"
+            placeholder="entrenador@fitconnect.com">
+        </div>
+        <div>
+          <label class="block text-sm font-bold text-gray-700 mb-1">Contraseña</label>
+          <input type="password" name="password" [(ngModel)]="loginData.password" required 
+            class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-fit-accent focus:ring-4 focus:ring-fit-accent/10 outline-none transition"
+            placeholder="••••••••">
+        </div>
+      </div>
+
+      <div class="flex items-center justify-between text-sm">
+        <label class="flex items-center text-gray-500 cursor-pointer">
+          <input type="checkbox" class="rounded border-gray-300 text-fit-accent focus:ring-fit-accent mr-2">
+          Recordarme
+        </label>
+        <a href="#" class="font-medium text-fit-accent hover:underline">¿Olvidaste tu contraseña?</a>
+      </div>
+
+      <button type="submit" 
+        class="group relative w-full flex justify-center py-4 px-4 border border-transparent font-bold rounded-xl text-white bg-fit-dark hover:bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-fit-dark transition shadow-lg">
+        Entrar al Sistema
+      </button>
+
+      <div class="text-center">
+        <a routerLink="/" class="text-sm text-gray-400 hover:text-fit-dark transition flex items-center justify-center gap-1">
+          ← Volver a la web principal
+        </a>
+      </div>
+    </form>
+  </div>
+</div>

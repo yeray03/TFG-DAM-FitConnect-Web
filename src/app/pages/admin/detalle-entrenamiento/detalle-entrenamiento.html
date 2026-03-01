@@ -1,0 +1,65 @@
+<div class="p-6">
+  <div class="flex items-center gap-4 mb-6">
+    <button routerLink="/admin/dashboard" class="text-gray-500 hover:text-gray-800">
+      ← Volver
+    </button>
+    <h2 class="text-3xl font-bold text-gray-800">Detalle de Sesión</h2>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 col-span-1">
+      <h3 class="text-lg font-semibold mb-4">Cliente</h3>
+      <p class="text-2xl font-bold text-gray-900">María García</p>
+      <p class="text-gray-600">maria@email.com</p>
+      <span
+        class="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-semibold mt-3"
+      >
+        Premium
+      </span>
+    </div>
+
+    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 col-span-2">
+      <h3 class="text-lg font-semibold mb-4">Detalles de la Sesión</h3>
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <p class="text-sm text-gray-500">Fecha y Hora</p>
+          <p class="font-medium text-gray-900">25 Oct, 10:00 AM</p>
+        </div>
+        <div>
+          <p class="text-sm text-gray-500">Tipo</p>
+          <p class="font-medium text-gray-900">Funcional</p>
+        </div>
+        <div class="col-span-2">
+          <label for="notas" class="text-sm text-gray-500 font-medium">Notas del entrenador</label>
+          <textarea
+            id="notas"
+            rows="3"
+            class="w-full text-gray-700 bg-gray-50 p-3 rounded-md mt-1 border border-gray-200 focus:ring-2 focus:ring-fit-accent focus:border-fit-accent"
+          >
+Enfoque en mejorar la postura en sentadillas.</textarea
+          >
+
+          <button
+            class="mt-2 text-sm bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition"
+          >
+            Guardar Notas
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 mt-6">
+    <h3 class="text-lg font-semibold mb-4">Ejercicios Programados</h3>
+    <div class="divide-y divide-gray-200">
+      <div class="py-3 flex justify-between">
+        <span class="font-medium text-gray-800">Sentadillas con peso</span>
+        <span class="text-gray-600">3 series x 12 repeticiones</span>
+      </div>
+      <div class="py-3 flex justify-between">
+        <span class="font-medium text-gray-800">Press de hombro</span>
+        <span class="text-gray-600">3 series x 10 repeticiones</span>
+      </div>
+    </div>
+  </div>
+</div>
